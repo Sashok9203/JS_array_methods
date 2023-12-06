@@ -14,7 +14,7 @@ console.info("\n");
 console.info("Task - 2");
 let array = [];
 for (let index = 0; index < 20; index++) {
-     array[index] = parseInt( Math.ceil(Math.random()*100));
+     array[index] = parseInt( Math.round(Math.random()*100));
 }
 console.info("Random array: " + array);
 console.info("\n");
@@ -54,8 +54,8 @@ console.info("\n");
 
 //Task - 8
 console.info("Task - 8");
-result = array.some((item, index) => array.indexOf(item) !== index);
-if(result){console.info("Array contains identical elements");}
+res = array.some((item, index) => array.lastIndexOf(item) !== index);
+if(res){console.info("Array contains identical elements");}
 else{console.info("Array not contains identical elements")}
 console.info("\n");
 
